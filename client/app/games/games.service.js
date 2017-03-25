@@ -27,6 +27,12 @@ var GamesService = (function () {
             .map(this.extractData)
             .catch(this.handleError);
     };
+    GamesService.prototype.read = function (gameId) {
+        return this._http
+            .get(this._baseURL + "/" + gameId)
+            .map(function (res) { return res.json(); })
+            .catch(this.handleError);
+    };
     GamesService.prototype.extractData = function (res) {
         var body = res.json();
         this.games = res.json();

@@ -10,6 +10,7 @@ import { GamesComponent } from './games.component';
 
 // Sub Components
 import { ListComponent } from './list/list.component';
+import { EditComponent } from './edit/edit.component';
 
 // Service
 import { GamesService } from './games.service';
@@ -20,14 +21,16 @@ import { GamesService } from './games.service';
   ],
   declarations: [
     GamesComponent,
-    ListComponent
+    ListComponent,
+    EditComponent
   ],
   providers: [
     GamesService
   ],
   exports: [
     GamesComponent,
-    ListComponent
+    ListComponent,
+    EditComponent
   ]
 })
 export class GamesModule {}

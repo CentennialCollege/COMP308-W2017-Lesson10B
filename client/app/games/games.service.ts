@@ -23,6 +23,13 @@ export class GamesService {
   .catch(this.handleError);
 }
 
+  read(gameId: string): Observable<any> {
+  return this._http
+  .get(`${this._baseURL}/${gameId}`)
+  .map((res: Response) => res.json())
+  .catch(this.handleError);
+  }
+
 private extractData(res: Response) {
   let body:Game[] = res.json();
   this.games = res.json();

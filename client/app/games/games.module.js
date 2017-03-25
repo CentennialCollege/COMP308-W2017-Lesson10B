@@ -17,6 +17,7 @@ var games_routes_1 = require("./games.routes");
 var games_component_1 = require("./games.component");
 // Sub Components
 var list_component_1 = require("./list/list.component");
+var edit_component_1 = require("./edit/edit.component");
 // Service
 var games_service_1 = require("./games.service");
 var GamesModule = (function () {
@@ -31,14 +32,16 @@ GamesModule = __decorate([
         ],
         declarations: [
             games_component_1.GamesComponent,
-            list_component_1.ListComponent
+            list_component_1.ListComponent,
+            edit_component_1.EditComponent
         ],
         providers: [
             games_service_1.GamesService
         ],
         exports: [
             games_component_1.GamesComponent,
-            list_component_1.ListComponent
+            list_component_1.ListComponent,
+            edit_component_1.EditComponent
         ]
     })
 ], GamesModule);
