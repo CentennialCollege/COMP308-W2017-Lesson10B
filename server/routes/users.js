@@ -18,7 +18,7 @@ router.get('/register', (req, res, next)=>{
    usersController.DisplayRegistration(req, res);
 }).post('/register', (req, res, next)=>{
   // POST / register - process the registration submission
-  usersController.ProcessRegistration(req, res);
+  usersController.ProcessRegistration(req, res, next);
 });
 
 // GET /logout - process the logout request
