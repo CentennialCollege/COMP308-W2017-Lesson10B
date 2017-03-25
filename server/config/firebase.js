@@ -6,16 +6,16 @@ let serviceAccount = require('./firebase.json');
 // initialize firebase admin for database access
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://comp308-w2017-lesson10a.firebaseio.com"
+  databaseURL: "https://comp308-w2017-lesson10b.firebaseio.com"
 })
 
 // initialize firebase app
 let config = {
-    apiKey: "AIzaSyDinhO2hFYZ_t3J_I2b3k11ejl8FOWZTUs",
-    authDomain: "comp308-w2017-lesson10a.firebaseapp.com",
-    databaseURL: "https://comp308-w2017-lesson10a.firebaseio.com",
-    storageBucket: "comp308-w2017-lesson10a.appspot.com",
-    messagingSenderId: "435798487499"
+    apiKey: "AIzaSyC2O3sb5sFay340tLzaFI-5cKhONx5KMrc",
+    authDomain: "comp308-w2017-lesson10b.firebaseapp.com",
+    databaseURL: "https://comp308-w2017-lesson10b.firebaseio.com",
+    storageBucket: "comp308-w2017-lesson10b.appspot.com",
+    messagingSenderId: "575267118156"
   };
   firebase.initializeApp(config);
 

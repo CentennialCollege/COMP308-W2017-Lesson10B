@@ -9,7 +9,9 @@ let usersController = require('../controllers/users');
 router.get('/login', (req, res, next)=>{
   usersController.DisplayLogin(req, res);
   // POST /login - process the login attempt
-}).post('/login', usersController.ProcessLogin());
+}).post('/login', (req, res, next) => {
+  usersController.ProcessLogin(req, res, next);
+});
 
 // GET /register - render the registration view
 router.get('/register', (req, res, next)=>{
